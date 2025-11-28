@@ -8,6 +8,13 @@
     <Platforms>x86;x64;arm64</Platforms>
     <RuntimeIdentifiers>win10-x86;win10-x64;win10-arm64</RuntimeIdentifiers>
     <UseWinUI>true</UseWinUI>
+    <!-- Addresses: https://github.com/microsoft/WindowsAppSDK/issues/4889 -->
+    <EnableMsixTooling>true</EnableMsixTooling>
+    <!-- Address: https://github.com/microsoft/WindowsAppSDK/issues/1762 -->
+    <!-- This bundles the .NET Core libraries -->
+    <SelfContained>true</SelfContained>
+    <!-- This bundles the WinUI3 components -->
+    <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Resources\Design.xaml" />
