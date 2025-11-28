@@ -1,5 +1,14 @@
 # VISCA Camera Controller
 
+See [Original Sources here](https://github.com/louangr/VISCACameraController)
+
+## Labforge Additions
+ * Support for Sony Block Camera [FCB-ER9500](https://pro.sony/ue_US/products/zoom-camera-blocks/fcb-er9500)
+   * 
+
+----
+# Original README
+
 VISCA Camera Controller is a Windows desktop app to control a PTZ camera using the VISCA protocol via a serial communication.
 
 <br>
