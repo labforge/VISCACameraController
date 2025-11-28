@@ -4,7 +4,7 @@ See [Original Sources here](https://github.com/louangr/VISCACameraController)
 
 ## Labforge Additions
  * Support for Sony Block Camera [FCB-ER9500](https://pro.sony/ue_US/products/zoom-camera-blocks/fcb-er9500)
-   * 
+ * Continous Integration and Delivery (CI/CD) using GitHub Actions [![Build VISCACameraController](https://github.com/labforge/VISCACameraController/actions/workflows/build.yml/badge.svg)](https://github.com/labforge/VISCACameraController/actions/workflows/build.yml)
 
 ----
 # Original README
