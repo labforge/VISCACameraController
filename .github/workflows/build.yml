@@ -29,4 +29,10 @@ jobs:
         run: dotnet build VISCACameraController/VISCACameraController.csproj --configuration Release --property:Platform=x64
 
       - name: Publish application
-        run: dotnet publish VISCACameraController/VISCACameraController.csproj --configuration Release --output ./publish
+        run: dotnet publish VISCACameraController/VISCACameraController.csproj --configuration Release --output ./publish --property:Platform=x64
+      
+      - name: Archive published files
+        uses: actions/upload-artifact@v3
+        with:
+          name: VISCACameraController
+          path: ./publish
