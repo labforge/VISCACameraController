@@ -3,6 +3,7 @@
     public enum FocusModes
     {
         Auto,
-        Manual
+        Manual,
+        Spot
     }
 }

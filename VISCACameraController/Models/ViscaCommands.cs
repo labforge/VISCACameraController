@@ -79,5 +79,8 @@ namespace VISCACameraController.Models
 
         [DataMember(Name = "zoomOut")]
         public string ZoomOut { get; set; }
+        
+        [DataMember(Name = "spotFocusDisplay")]
+        public string SpotFocusDisplay { get; set; }
     }
 }

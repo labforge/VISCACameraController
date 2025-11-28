@@ -23,5 +23,7 @@
   "focusNearer": "8101040837FF",
   "stopZoomMove": "8101040700FF",
   "zoomIn": "8101040720FF",
-  "zoomOut": "8101040730FF"
+  "zoomOut": "8101040730FF",
+  
+  "spotFocusDisplay": "810105150{S}FF" 
 }

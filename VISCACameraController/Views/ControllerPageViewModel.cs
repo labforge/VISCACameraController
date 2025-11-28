@@ -105,7 +105,16 @@ namespace VISCACameraController.Views
             {
                 SetProperty(ref selectedFocusMode, value);
                 OnPropertyChanged(nameof(IsAutoFocusModeEnabled));
-                SendCommandOnSerialPort(value.Mode == Models.FocusModes.Auto ? viscaCommands.SetAutoFocus : viscaCommands.SetManualFocus);
+                switch (value.Mode)
+                {
+                    case Models.FocusModes.Spot:
+                        SendCommandOnSerialPort(SpotFocusDisplayViscaCommandBuilder(viscaCommands.SpotFocusDisplay, true));
+                        break;
+                    default:
+                        SendCommandOnSerialPort(SpotFocusDisplayViscaCommandBuilder(viscaCommands.SpotFocusDisplay, false));
+                        SendCommandOnSerialPort(value.Mode == Models.FocusModes.Auto ? viscaCommands.SetAutoFocus : viscaCommands.SetManualFocus);
+                        break;
+                }
             }
         }
 
@@ -283,6 +292,18 @@ namespace VISCACameraController.Views
         }
 
         private string TiltPanViscaCommandBuilder(string command) => new StringBuilder(command).Replace("{S}", PanAndTiltSpeed.ToString("D2")).ToString();
+
+        private string SpotFocusDisplayViscaCommandBuilder(string command, bool on)
+        {
+            if (on)
+            {
+                return new StringBuilder(command).Replace("{S}", "2").ToString();
+            }
+            else
+            {
+                return new StringBuilder(command).Replace("{S}", "3").ToString();
+            }
+        } 
 
         private string GetSelectedComPort()
         {

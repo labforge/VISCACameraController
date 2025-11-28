@@ -123,6 +123,9 @@
   <data name="AutoFocusModeLabel" xml:space="preserve">
     <value>Focus Auto</value>
   </data>
+  <data name="SpotFocusModeLabel" xml:space="preserve">
+    <value>Point focal</value>
+  </data>
   <data name="CameraPowerToogleSwitch.OffContent" xml:space="preserve">
     <value>Éteint</value>
   </data>
