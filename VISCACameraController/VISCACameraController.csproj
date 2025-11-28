@@ -2,11 +2,12 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows10.0.19041.0</TargetFramework>
+    <NoWarn>NETSDK1138</NoWarn><!-- Shush warning, I don't think we'll migrate this ever -->
     <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
     <RootNamespace>VISCACameraController</RootNamespace>
     <ApplicationManifest>app.manifest</ApplicationManifest>
-    <Platforms>x86;x64;arm64</Platforms>
-    <RuntimeIdentifiers>win10-x86;win10-x64;win10-arm64</RuntimeIdentifiers>
+    <Platforms>x64</Platforms>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <UseWinUI>true</UseWinUI>
     <!-- Addresses: https://github.com/microsoft/WindowsAppSDK/issues/4889 -->
     <EnableMsixTooling>true</EnableMsixTooling>
@@ -14,6 +15,7 @@
     <!-- This bundles the .NET Core libraries -->
     <RuntimeIdentifier>win-x64</RuntimeIdentifier> <!-- This might break things, but let it go for CI -->
     <SelfContained>true</SelfContained>
+    <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
     <!-- This bundles the WinUI3 components -->
     <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
   </PropertyGroup>
