@@ -26,7 +26,7 @@ jobs:
         run: dotnet restore VISCACameraController/VISCACameraController.csproj
 
       - name: Build solution
-        run: dotnet build VISCACameraController/VISCACameraController.csproj --configuration Release
+        run: dotnet build VISCACameraController/VISCACameraController.csproj --configuration Release --property:Platform=x64
 
       - name: Publish application
         run: dotnet publish VISCACameraController/VISCACameraController.csproj --configuration Release --output ./publish
