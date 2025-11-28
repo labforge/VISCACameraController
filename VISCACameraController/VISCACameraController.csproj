@@ -12,6 +12,7 @@
     <EnableMsixTooling>true</EnableMsixTooling>
     <!-- Address: https://github.com/microsoft/WindowsAppSDK/issues/1762 -->
     <!-- This bundles the .NET Core libraries -->
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier> <!-- This might break things, but let it go for CI -->
     <SelfContained>true</SelfContained>
     <!-- This bundles the WinUI3 components -->
     <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
