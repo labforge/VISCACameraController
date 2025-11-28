@@ -283,11 +283,13 @@ namespace VISCACameraController.Views
         {
             try
             {
+                Console.WriteLine("Sending command: " + command);
                 byte[] hexstring = HexaConverter.ConvertHexaStringToByteArray(command);
                 serial.Write(hexstring, 0, hexstring.Length);
             }
             catch (Exception)
             {
+                Console.WriteLine("Error sending command: " + command);
             }
         }
 

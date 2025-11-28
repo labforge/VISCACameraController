@@ -303,18 +303,57 @@
                                       SelectedItem="{x:Bind PageViewModel.SelectedFocusMode, Mode=TwoWay}" />
 
                             <StackPanel Orientation="Horizontal"
-                                        Margin="0,8,0,0">
+                                        Margin="0,8,0,0"
+                                        >
+                                <!-- Visibility="{x:Bind PageViewModel.IsAutoFocusModeEnabled, Converter={StaticResource BoolNegationConverter}, ConverterParameter=!, Mode=OneWay}" -->
                                 <Button x:Uid="FarManualFocusButton"
                                         x:Name="FarManualFocusButton"
                                         Margin="0,0,8,0"
                                         Width="32"
-                                        Height="32"
-                                        IsEnabled="{x:Bind PageViewModel.IsAutoFocusModeEnabled, Converter={StaticResource BoolNegationConverter}, ConverterParameter=!, Mode=OneWay}" />
+                                        Height="32"/>
                                 <Button x:Uid="NearManualFocusButton"
                                         x:Name="NearManualFocusButton"
                                         Width="32"
                                         Height="32"
-                                        IsEnabled="{x:Bind PageViewModel.IsAutoFocusModeEnabled, Converter={StaticResource BoolNegationConverter}, ConverterParameter=!, Mode=OneWay}" />
+                                        />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal"
+                                        Margin="0,8,0,0">
+                                <TextBox x:Name="X1Entry"
+                                         Header="X1"
+                                         InputScope="Number"
+                                         Text=""
+                                         Margin="0,0,4,0"
+                                         MinWidth="32"
+                                         Width="32"
+                                         ToolTipService.ToolTip="Numeric value for X1 (0-8)"
+                                         />
+                                <TextBox x:Name="Y1Entry"
+                                         Header="Y1"
+                                         InputScope="Number"
+                                         Text=""
+                                         Margin="0,0,4,0"
+                                         Width="32"
+                                         MinWidth="32"
+                                         ToolTipService.ToolTip="Numeric value for Y1 (0-8)"
+                                         />
+                                <TextBox x:Name="X2Entry"
+                                         Header="X2"
+                                         InputScope="Number"
+                                         Text=""
+                                         Margin="0,0,4,0"
+                                         MinWidth="32"
+                                         Width="32"
+                                         ToolTipService.ToolTip="Numeric value for X2 (0-8)"
+                                         />
+                                <TextBox x:Name="Y2Entry"
+                                         Header="Y2"
+                                         InputScope="Number"
+                                         Text=""
+                                         MinWidth="32"
+                                         Width="32"
+                                         ToolTipService.ToolTip="Numeric value for Y2 (0-8)"
+                                         />
                             </StackPanel>
                         </StackPanel>
                     </Border>
